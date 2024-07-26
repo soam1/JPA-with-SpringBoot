@@ -61,9 +61,16 @@ public class BootJpaExampleApplication {
 		
 		
 		//delete the user
-		userRepository.deleteById(202);
-		userRepository.delete(user2);
+//		userRepository.deleteById(202);
+//		userRepository.delete(user2);
 //		userRepository.deleteAll(); //delete all the data
+		
+		
+		userRepository.findByName("Akash").forEach(u -> {
+			System.out.println(u);
+		});
+		
+		
 		((ConfigurableApplicationContext) context).close();
 		
 		
