@@ -70,6 +70,14 @@ public class BootJpaExampleApplication {
 			System.out.println(u);
 		});
 		
+		userRepository.getAllUsers().forEach(u -> {
+			System.out.println(u);
+		});
+		
+		userRepository.getUserByName("Akash").forEach(u -> {
+			System.out.println(u);
+		});
+		
 		
 		((ConfigurableApplicationContext) context).close();
 		
